@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  PORTFOLIO DESIGN SYSTEM
+  ========================
+  Tema: Dark Professional con acentos Cyan/Teal
+  Para modificar colores, edita las variables HSL abajo.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Tema claro (fallback) */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 10%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    --primary: 180 70% 45%;
+    --primary-foreground: 220 20% 5%;
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 20% 20%;
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 180 70% 45%;
+    --accent-foreground: 220 20% 5%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 180 70% 45%;
+    --radius: 0.75rem;
+  }
+
+  /* Tema oscuro - Profesional y moderno */
+  .dark {
+    --background: 220 25% 6%;
+    --foreground: 220 15% 95%;
+    --card: 220 25% 9%;
+    --card-foreground: 220 15% 95%;
+    --popover: 220 25% 9%;
+    --popover-foreground: 220 15% 95%;
+    --primary: 180 70% 50%;
+    --primary-foreground: 220 25% 5%;
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 220 15% 90%;
+    --muted: 220 20% 12%;
+    --muted-foreground: 220 15% 55%;
+    --accent: 180 70% 50%;
+    --accent-foreground: 220 25% 5%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 15%;
+    --input: 220 20% 15%;
+    --ring: 180 70% 50%;
+
+    /* Colores adicionales para el portafolio */
+    --glow: 180 70% 50%;
+    --gradient-start: 180 70% 50%;
+    --gradient-end: 200 80% 45%;
+  }
+
+  /* Sidebar (si se usa) */
+  :root {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 180 70% 50%;
+  }
+
+  .dark {
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 180 70% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 220 20% 15%;
+    --sidebar-ring: 180 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Tipografía para código */
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* 
+    CLASES DE UTILIDAD PARA EL PORTAFOLIO
+    Úsalas en tus componentes para mantener consistencia
+  */
+
+  /* Gradiente de texto principal */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  /* Efecto de brillo/glow */
+  .glow {
+    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.5);
+  }
+
+  .glow-sm {
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.4);
+  }
+
+  /* Borde con gradiente */
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box,
+                linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.2)) border-box;
+  }
+
+  /* Fondo con patrón de puntos sutiles */
+  .bg-dots {
+    background-image: radial-gradient(hsl(var(--muted-foreground) / 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Contenedor principal */
+  .container-portfolio {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Títulos de sección */
+  .section-title {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight;
+  }
+
+  /* Subtítulos */
+  .section-subtitle {
+    @apply text-muted-foreground text-lg sm:text-xl max-w-2xl;
+  }
+
+  /* Espaciado de secciones */
+  .section-spacing {
+    @apply py-20 sm:py-28 lg:py-32;
+  }
+}
+
+@layer utilities {
+  /* Animación de entrada suave */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animación de pulso para CTA */
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 30px -5px hsl(var(--primary) / 0.6);
+    }
+  }
+}
