@@ -11,7 +11,7 @@ import { useRef } from "react";
 import { ExternalLink, Github, ArrowUpRight, } from "lucide-react";
 
 // imágenes de los proyectos
-import projectEcommerce from "@/assets/project-ecommerce.jpg";
+import projectEcommerce from "@/assets/project-ecommerce.jpeg";
 import projectDashboard from "@/assets/project-dashboard.jpg";
 import projectLanding from "@/assets/project-landing.jpg";
 import projectTasks from "@/assets/project-tasks.jpg";
@@ -25,8 +25,8 @@ const projects = [
     description: "Tienda online con carrito de compras, pasarela de pagos y panel de administración. Diseño responsive y optimizado para conversión.",
     image: projectEcommerce,
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    liveUrl: "https://github.com/lugo8s",
-    githubUrl: "https://github.com/lugo8s",
+    
+    githubUrl: " https://e-commerce-sl.netlify.app",
     featured: true,
   },
   {
