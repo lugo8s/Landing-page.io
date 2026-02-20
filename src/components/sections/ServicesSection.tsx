@@ -38,7 +38,7 @@ const services: {
   },
   {
     icon: Palette,
-    title: "Diseños Profecionales ",
+    title: "Diseños Profesionales ",
     description: "Diseño de interfaces intuitivas y atractivas que mejoran la experiencia del usuario y aumentan la conversión.",
     features: [
       "Wireframes y prototipos",
