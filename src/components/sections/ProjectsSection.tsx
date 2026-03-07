@@ -11,9 +11,9 @@ import { useRef } from "react";
 import { ExternalLink, Github, ArrowUpRight, } from "lucide-react";
 
 // imágenes de los proyectos
-import projectEcommerce from "@/assets/project-ecommerce.jpeg";
-import projectDashboard from "@/assets/project-dashboard.jpg";
-import projectLanding from "@/assets/project-landing.jpg";
+import projectEcommerce from "@/assets/project-ecommerce.png";
+import projectDashboard from "@/assets/project-dashboard.png";
+import projectLanding from "@/assets/project-landing.png";
 import projectTasks from "@/assets/project-tasks.jpg";
 
 // PROYECTOS - edita esta lista con tus proyectos
@@ -21,7 +21,7 @@ import projectTasks from "@/assets/project-tasks.jpg";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Moderno (por definir)",
+    title: "E-Commerce Moderno",
     description: "Tienda online con carrito de compras, pasarela de pagos y panel de administración. Diseño responsive y optimizado para conversión.",
     image: projectEcommerce,
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
