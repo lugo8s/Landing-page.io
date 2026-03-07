@@ -35,8 +35,8 @@ const projects = [
     description: "Panel de control interactivo con gráficos en tiempo real, reportes y gestión de datos. Interfaz intuitiva y moderna.",
     image: projectDashboard,
     technologies: ["React", "TypeScript", "Tailwind", "Chart.js"],
-    liveUrl: "https://github.com/lugo8s",
-    githubUrl: "https://github.com/lugo8s",
+    
+    githubUrl: "https://dashboard-lugo-s.netlify.app",
     featured: true,
   },
   {
